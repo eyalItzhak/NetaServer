@@ -1,9 +1,10 @@
 import mongoose from "mongoose";
 import { httpServer } from "./app";
-import dotenv from "dotenv";
+//import dotenv from "dotenv";
+import { DB_CONN_STRING, SERVER_PORT } from "./consts/const";
 
-dotenv.config();
-const { DB_CONN_STRING, SERVER_PORT } = process.env;
+//dotenv.config();
+//const { DB_CONN_STRING, SERVER_PORT } = process.env;
 
 const bootstrap = async () => {
   await mongoose

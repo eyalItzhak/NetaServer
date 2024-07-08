@@ -2,6 +2,7 @@ import { Server, Socket } from "socket.io";
 import dotenv from "dotenv";
 import { Map, SocketEvents } from "../models/socketTypes";
 import { Roles } from "../models/roomTypes";
+import { CLIENT_URL } from "../consts/const";
 
 dotenv.config();
 
@@ -19,7 +20,7 @@ const usersRoomsMap: Map = {};
 const connectToSocket = (server: Server) => {
   const io = socket(server, {
     cors: {
-      origin: process.env.CLIENT_URL,
+      origin: CLIENT_URL,
       methods: ["GET", "POST"],
     },
   });
