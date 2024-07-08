@@ -1,7 +1,6 @@
 import { json } from "body-parser";
 import { roomsRouter } from "./routes/rooms";
 import { connectToSocket } from "./socket/socket";
-
 const express = require("express");
 const cors = require("cors");
 const http = require("http");
