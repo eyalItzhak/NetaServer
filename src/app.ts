@@ -15,3 +15,5 @@ app.use(json());
 app.use(roomsRouter);
 
 export { app, server as httpServer };
+
+console.log("app.ts loaded");
